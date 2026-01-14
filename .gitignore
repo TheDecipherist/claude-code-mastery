@@ -1,0 +1,13 @@
+# Environment variables
+.env
+.env.*
+.env.local
+
+# Local Claude instructions (not for public repo)
+.claude/
+
+# Documentation and tracking files (not for public repo)
+/docs
+
+# IDE
+*.code-workspace

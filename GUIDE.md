@@ -681,6 +681,71 @@ Run linters and tests when Claude finishes each turn:
 | 1 | Error (shown to user only) |
 | **2** | **Block operation, feed stderr to Claude** |
 
+#### Hook Input Format
+
+Hooks receive JSON via stdin containing context about the current operation. This lets you build conditional logic based on what Claude is doing.
+
+**PreToolUse / PostToolUse:**
+
+```json
+{
+  "hook_type": "PreToolUse",
+  "tool_name": "Read",
+  "tool_input": {
+    "file_path": "/path/to/file.js"
+  },
+  "session_id": "abc123-def456"
+}
+```
+
+**Stop (end of turn):**
+
+```json
+{
+  "hook_type": "Stop",
+  "stop_reason": "end_turn",
+  "transcript_path": "/tmp/claude/transcript.json"
+}
+```
+
+**UserPromptSubmit:**
+
+```json
+{
+  "hook_type": "UserPromptSubmit",
+  "prompt": "Help me refactor this function",
+  "session_id": "abc123-def456"
+}
+```
+
+**Example: Conditional Logic Based on Input**
+
+```python
+#!/usr/bin/env python3
+import json
+import sys
+
+data = json.load(sys.stdin)
+tool_name = data.get('tool_name', '')
+tool_input = data.get('tool_input', {})
+
+# Different behavior based on which tool
+if tool_name == 'Bash':
+    command = tool_input.get('command', '')
+    if 'rm ' in command:
+        print("Blocking rm command", file=sys.stderr)
+        sys.exit(2)
+
+# Access file paths for Read/Edit/Write
+if tool_name in ['Read', 'Edit', 'Write']:
+    file_path = tool_input.get('file_path', '')
+    # Your logic here
+
+sys.exit(0)  # Allow by default
+```
+
+**Limitation:** There's no native `is_plan_mode` flag. To detect plan mode, you'd need to infer from context (e.g., check if recent prompts contain plan-related keywords or parse the transcript).
+
 ### Skills: Packaged Expertise
 
 [Skills](https://code.claude.com/docs/en/skills) are markdown files that teach Claude how to do something specific — like a training manual it can reference on demand.
