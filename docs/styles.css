@@ -641,10 +641,34 @@ footer a:hover {
 
   .menu-toggle {
     display: flex;
+    flex-shrink: 0;
+  }
+
+  /* Keep hamburger and title on same line */
+  header nav ul:first-child li {
+    display: flex;
+    align-items: center;
+  }
+
+  .brand {
+    flex-shrink: 1;
+    min-width: 0;
+  }
+
+  .brand-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   header nav ul:last-child {
-    gap: 0.75rem;
+    gap: 0.5rem;
+    flex-shrink: 0;
+  }
+
+  header nav ul:last-child a {
+    padding: 0.5rem 0.5rem;
+    font-size: 0.875rem;
   }
 
   /* Prevent body scroll when menu is open */
