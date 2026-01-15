@@ -1,20 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Claude Code Mastery - Complete Guide</title>
   <meta name="description" content="The complete guide to mastering Claude Code configuration, hooks, skills, and best practices.">
-
-  <!-- Prevent FOUC: set theme before first paint -->
-  <script>
-    const theme = localStorage.getItem('theme') ||
-      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-    document.documentElement.setAttribute('data-theme', theme);
-  </script>
-
-  <!-- Pico CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
 
   <!-- Prism.js theme -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css">
@@ -23,21 +13,23 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="container">
-    <nav>
+  <header>
+    <nav class="container">
       <ul>
         <li>
-          <span class="brand">
+          <div class="brand">
             <a href="https://thedecipherist.com?utm_source=github&utm_medium=website&utm_campaign=claude-code-mastery&utm_content=header-logo" target="_blank" rel="noopener" title="By TheDecipherist">
               <img src="thedecipherist.png" alt="TheDecipherist" class="logo">
             </a>
-            <strong>Claude Code Mastery</strong> <span class="author">by <a href="https://thedecipherist.com?utm_source=github&utm_medium=website&utm_campaign=claude-code-mastery&utm_content=header-author" target="_blank" rel="noopener">TheDecipherist</a></span>
-          </span>
+            <div class="brand-text">
+              <span class="brand-title">Claude Code Mastery</span>
+              <span class="brand-author">by <a href="https://thedecipherist.com?utm_source=github&utm_medium=website&utm_campaign=claude-code-mastery&utm_content=header-author" target="_blank" rel="noopener">TheDecipherist</a></span>
+            </div>
+          </div>
         </li>
       </ul>
       <ul>
         <li><a href="https://github.com/TheDecipherist/claude-code-mastery" target="_blank" rel="noopener">GitHub</a></li>
-        <li><button id="theme-toggle" aria-label="Toggle theme"></button></li>
       </ul>
     </nav>
   </header>
@@ -58,11 +50,11 @@
   </main>
 
   <footer class="container">
-    <small>
+    <p>
       By <a href="https://thedecipherist.com?utm_source=github&utm_medium=website&utm_campaign=claude-code-mastery&utm_content=footer-author" target="_blank" rel="noopener">TheDecipherist</a>
       &middot;
       <a href="https://github.com/TheDecipherist/claude-code-mastery" target="_blank" rel="noopener">View Source</a>
-    </small>
+    </p>
   </footer>
 
   <!-- Libraries -->
