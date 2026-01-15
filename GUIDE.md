@@ -1,5 +1,7 @@
 # The Complete Guide to Claude Code V2: Global CLAUDE.md, MCP Servers, Commands, Skills, Hooks, and Why Single-Purpose Chats Matter
 
+> 📖 **Prefer a better reading experience?** [View this guide on our website](https://thedecipherist.github.io/claude-code-mastery/?utm_source=github&utm_medium=readme&utm_campaign=claude-code-mastery&utm_content=header-cta)
+
 ## 🎉 Updated Based on Community Feedback
 
 This is V2 of the guide that went viral. Huge thanks to u/headset38, u/tulensrma, u/jcheroske, and everyone who commented. You pointed out that CLAUDE.md rules are suggestions Claude can ignore — and you were right. This version adds **Part 7: Skills & Hooks** covering the enforcement layer.

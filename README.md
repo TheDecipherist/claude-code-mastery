@@ -2,6 +2,8 @@
 
 The complete guide to maximizing Claude Code: Global CLAUDE.md, MCP Servers, Commands, Hooks, Skills, and Why Single-Purpose Chats Matter.
 
+### 🌐 [Read the Guide on Our Website](https://thedecipherist.github.io/claude-code-mastery/?utm_source=github&utm_medium=readme&utm_campaign=claude-code-mastery&utm_content=hero-cta) ← Best reading experience
+
 > **TL;DR:** Your global `~/.claude/CLAUDE.md` is a security gatekeeper AND project scaffolding blueprint. MCP servers extend Claude's capabilities. Custom commands automate workflows. **Hooks enforce rules deterministically** (where CLAUDE.md can fail). Skills package reusable expertise. And research shows mixing topics in a single chat causes **39% performance degradation**.
 
 ---
@@ -41,7 +43,7 @@ cp -r skills/* ~/.claude/skills/
 
 ## 📖 The Guide
 
-Read the full guide: **[GUIDE.md](./GUIDE.md)**
+**[📱 Read on Website](https://thedecipherist.github.io/claude-code-mastery/?utm_source=github&utm_medium=readme&utm_campaign=claude-code-mastery&utm_content=guide-section)** (recommended) | [📄 View GUIDE.md](./GUIDE.md)
 
 ### What's Covered
 
