@@ -24,8 +24,14 @@
     <nav class="container">
       <ul>
         <li>
+          <!-- Hamburger menu button (mobile only) -->
+          <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
           <div class="brand">
-            <a href="https://thedecipherist.com?utm_source=github&utm_medium=website&utm_campaign=claude-code-mastery&utm_content=header-logo" target="_blank" rel="noopener" title="By TheDecipherist">
+            <a href="https://thedecipherist.com?utm_source=github&utm_medium=website&utm_campaign=claude-code-mastery&utm_content=header-logo" target="_blank" rel="noopener" title="By TheDecipherist" class="brand-logo">
               <img src="thedecipherist.png" alt="TheDecipherist" class="logo">
             </a>
             <div class="brand-text">
@@ -41,6 +47,17 @@
       </ul>
     </nav>
   </header>
+
+  <!-- Mobile menu overlay -->
+  <div id="mobile-menu-overlay" class="mobile-menu-overlay"></div>
+
+  <!-- Mobile menu drawer -->
+  <aside id="mobile-menu" class="mobile-menu">
+    <nav id="mobile-toc" class="mobile-toc">
+      <div class="toc-header">Contents</div>
+      <!-- Populated by JavaScript -->
+    </nav>
+  </aside>
 
   <main class="container">
     <aside id="sidebar">

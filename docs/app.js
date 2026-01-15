@@ -20,6 +20,59 @@
     });
   }
 
+  // Mobile menu toggle
+  function initMobileMenu() {
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const overlay = document.getElementById('mobile-menu-overlay');
+
+    if (!menuToggle || !mobileMenu || !overlay) return;
+
+    function openMenu() {
+      menuToggle.classList.add('active');
+      menuToggle.setAttribute('aria-expanded', 'true');
+      mobileMenu.classList.add('active');
+      overlay.classList.add('active');
+      document.body.classList.add('menu-open');
+    }
+
+    function closeMenu() {
+      menuToggle.classList.remove('active');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      mobileMenu.classList.remove('active');
+      overlay.classList.remove('active');
+      document.body.classList.remove('menu-open');
+    }
+
+    function toggleMenu() {
+      if (mobileMenu.classList.contains('active')) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    }
+
+    // Toggle on button click
+    menuToggle.addEventListener('click', toggleMenu);
+
+    // Close on overlay click
+    overlay.addEventListener('click', closeMenu);
+
+    // Close on link click (after navigation)
+    mobileMenu.addEventListener('click', (e) => {
+      if (e.target.tagName === 'A') {
+        closeMenu();
+      }
+    });
+
+    // Close on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+        closeMenu();
+      }
+    });
+  }
+
   // Configure marked.js
   function configureMarked() {
     const renderer = new marked.Renderer();
@@ -63,48 +116,68 @@
   function buildTOC() {
     const headings = document.querySelectorAll('#content h2, #content h3');
     const toc = document.getElementById('toc');
-    if (!toc || headings.length === 0) return;
+    const mobileToc = document.getElementById('mobile-toc');
 
-    // Clear existing links (keep header)
-    const header = toc.querySelector('.toc-header');
-    toc.innerHTML = '';
-    if (header) toc.appendChild(header);
+    if (headings.length === 0) return;
 
-    headings.forEach(h => {
-      if (!h.id) return;
+    // Helper to populate a TOC container
+    function populateTOC(container) {
+      if (!container) return;
 
-      const link = document.createElement('a');
-      link.href = '#' + h.id;
-      link.textContent = h.textContent;
-      link.setAttribute('data-level', h.tagName.charAt(1));
-      toc.appendChild(link);
-    });
+      // Clear existing links (keep header)
+      const header = container.querySelector('.toc-header');
+      container.innerHTML = '';
+      if (header) container.appendChild(header);
+
+      headings.forEach(h => {
+        if (!h.id) return;
+
+        const link = document.createElement('a');
+        link.href = '#' + h.id;
+        link.textContent = h.textContent;
+        link.setAttribute('data-level', h.tagName.charAt(1));
+        container.appendChild(link);
+      });
+    }
+
+    // Populate both desktop and mobile TOCs
+    populateTOC(toc);
+    populateTOC(mobileToc);
   }
 
   // Scroll spy - highlight current section in TOC
   function initScrollSpy() {
-    const links = document.querySelectorAll('#toc a[href^="#"]');
+    const desktopLinks = document.querySelectorAll('#toc a[href^="#"]');
+    const mobileLinks = document.querySelectorAll('#mobile-toc a[href^="#"]');
     const sections = document.querySelectorAll('#content h2[id], #content h3[id]');
 
-    if (links.length === 0 || sections.length === 0) return;
+    if (sections.length === 0) return;
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            // Remove active from all
-            links.forEach(link => link.classList.remove('active'));
+            // Remove active from all links (desktop and mobile)
+            desktopLinks.forEach(link => link.classList.remove('active'));
+            mobileLinks.forEach(link => link.classList.remove('active'));
 
-            // Add active to matching link
-            const activeLink = document.querySelector('#toc a[href="#' + entry.target.id + '"]');
-            if (activeLink) {
-              activeLink.classList.add('active');
+            // Add active to matching links in both TOCs
+            const selector = 'a[href="#' + entry.target.id + '"]';
+            const activeDesktopLink = document.querySelector('#toc ' + selector);
+            const activeMobileLink = document.querySelector('#mobile-toc ' + selector);
 
-              // Scroll TOC to keep active link visible
+            if (activeDesktopLink) {
+              activeDesktopLink.classList.add('active');
+
+              // Scroll desktop TOC to keep active link visible
               const toc = document.getElementById('toc');
-              if (toc && activeLink.offsetTop > toc.clientHeight) {
-                toc.scrollTop = activeLink.offsetTop - toc.clientHeight / 2;
+              if (toc && activeDesktopLink.offsetTop > toc.clientHeight) {
+                toc.scrollTop = activeDesktopLink.offsetTop - toc.clientHeight / 2;
               }
+            }
+
+            if (activeMobileLink) {
+              activeMobileLink.classList.add('active');
             }
           }
         });
@@ -188,6 +261,7 @@
   // Initialize app
   function init() {
     initTheme();
+    initMobileMenu();
     configureMarked();
     loadGuide();
   }
