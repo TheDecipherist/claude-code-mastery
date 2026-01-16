@@ -176,16 +176,28 @@ header nav ul:last-child a:hover {
 .dropdown-menu {
   display: none;
   position: absolute;
-  top: calc(100% + 0.5rem);
+  top: 100%;
   right: 0;
   min-width: 240px;
   background: var(--bg-secondary);
   border: 1px solid var(--border-color);
   border-radius: 12px;
   padding: 0.5rem;
+  padding-top: 1rem;
   z-index: 200;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
   flex-direction: column;
+  margin-top: 0.5rem;
+}
+
+/* Invisible bridge to maintain hover across the gap */
+.dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -0.5rem;
+  left: 0;
+  right: 0;
+  height: 0.5rem;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -193,7 +205,9 @@ header nav ul:last-child a:hover {
 }
 
 .dropdown-menu a {
-  display: block !important;
+  display: flex !important;
+  align-items: center;
+  gap: 0.75rem;
   padding: 0.75rem 1rem !important;
   border-radius: 8px;
   text-decoration: none;
@@ -206,15 +220,18 @@ header nav ul:last-child a:hover {
   background: var(--bg-tertiary) !important;
 }
 
+.dropdown-item-text {
+  display: flex;
+  flex-direction: column;
+}
+
 .dropdown-item-title {
-  display: block;
   color: var(--text-primary);
   font-weight: 500;
   font-size: 0.9rem;
 }
 
 .dropdown-item-desc {
-  display: block;
   color: var(--text-muted);
   font-size: 0.8rem;
   margin-top: 0.15rem;
@@ -222,6 +239,19 @@ header nav ul:last-child a:hover {
 
 .dropdown-menu a:hover .dropdown-item-title {
   color: var(--accent-cyan);
+}
+
+/* Link favicons */
+.link-favicon {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.dropdown-menu .link-favicon {
+  width: 20px;
+  height: 20px;
 }
 
 /* Nav Icon Button */
@@ -261,12 +291,37 @@ header nav ul:last-child a:hover {
   background: var(--bg-secondary);
 }
 
+/* Hero Banner */
+.hero-banner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 6rem 2rem 0;
+}
+
+.hero-banner img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+  .hero-banner {
+    padding: 5rem 1rem 0;
+  }
+
+  .hero-banner img {
+    border-radius: 12px;
+  }
+}
+
 /* Main Layout */
 main.container {
   display: grid;
   grid-template-columns: 280px 1fr;
   gap: 3rem;
-  padding-top: 6rem;
+  padding-top: 2rem;
   padding-bottom: 4rem;
   align-items: start;
 }
@@ -556,6 +611,7 @@ footer .footer-projects {
   margin-bottom: 1.5rem !important;
   flex-wrap: wrap;
   padding: 0 1rem;
+  margin-top:1.5rem;
 }
 
 .footer-label {
@@ -565,6 +621,9 @@ footer .footer-projects {
 }
 
 .footer-projects a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   padding: 0.5rem 1rem;
   border: 1px solid var(--border-color);
   border-radius: 8px;
@@ -723,7 +782,9 @@ footer .footer-projects {
 }
 
 .mobile-projects a {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   padding: 0.6rem 1rem;
   margin-top: 0.5rem;
   text-decoration: none;
@@ -759,7 +820,7 @@ footer .footer-projects {
   }
 
   .container {
-    padding: 0 1rem;
+    padding: 1rem 1rem;
   }
 
   #content h1 {
@@ -828,6 +889,21 @@ footer .footer-projects {
   /* Prevent body scroll when menu is open */
   body.menu-open {
     overflow: hidden;
+  }
+
+  /* Footer links stacked on mobile */
+  footer .footer-projects {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .footer-label {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-projects a {
+    width: 100%;
+    justify-content: center;
   }
 }
 
