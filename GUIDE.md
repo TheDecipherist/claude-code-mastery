@@ -1,5 +1,7 @@
 # The Complete Guide to Claude Code V3: LSP, CLAUDE.md, MCP, Skills & Hooks — Now With IDE-Level Code Intelligence
 
+📸 **[View with banner on the website](https://thedecipherist.github.io/claude-code-mastery?utm_source=reddit&utm_medium=post&utm_campaign=claude-code-mastery&utm_content=v3-guide)**
+
 ## 🎉 V3: Built on Community Feedback (Again)
 
 V2 hit #2 all-time on r/ClaudeAI. Your comments made V3 possible. Huge thanks to u/BlueVajra (commands/skills merge), u/stratofax (dotfiles sync), u/antoniocs (MCP tradeoffs), u/GeckoLogic (LSP), and everyone from V2: u/headset38, u/tulensrma, u/jcheroske.
