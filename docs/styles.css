@@ -174,6 +174,7 @@ header nav ul:last-child a:hover {
 }
 
 .dropdown-menu {
+  display: none;
   position: absolute;
   top: calc(100% + 0.5rem);
   right: 0;
@@ -182,30 +183,27 @@ header nav ul:last-child a:hover {
   border: 1px solid var(--border-color);
   border-radius: 12px;
   padding: 0.5rem;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-10px);
-  transition: all 0.2s ease;
   z-index: 200;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  flex-direction: column;
 }
 
 .dropdown:hover .dropdown-menu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
+  display: flex;
 }
 
 .dropdown-menu a {
-  display: block;
-  padding: 0.75rem 1rem;
+  display: block !important;
+  padding: 0.75rem 1rem !important;
   border-radius: 8px;
   text-decoration: none;
   transition: all 0.2s ease;
+  background: transparent !important;
+  border: none !important;
 }
 
 .dropdown-menu a:hover {
-  background: var(--bg-tertiary);
+  background: var(--bg-tertiary) !important;
 }
 
 .dropdown-item-title {
