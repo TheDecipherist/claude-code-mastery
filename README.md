@@ -8,7 +8,6 @@
 
 The complete guide to maximizing Claude Code: Global CLAUDE.md, MCP Servers, Commands, Hooks, Skills, and Why Single-Purpose Chats Matter.
 
-### 🌐 [Read V4 on Our Website](https://thedecipherist.com/articles/claude-code-guide-v4/?utm_source=github&utm_medium=readme&utm_campaign=claude-code-mastery&utm_content=hero-cta) ← Best reading experience
 ### 🌐 [Read V3 on GitHub Pages](https://thedecipherist.github.io/claude-code-mastery/?utm_source=github&utm_medium=readme&utm_campaign=claude-code-mastery&utm_content=hero-cta)
 
 > **TL;DR:** Your global `~/.claude/CLAUDE.md` is a security gatekeeper AND project scaffolding blueprint. MCP servers extend Claude's capabilities. Custom commands automate workflows. **Hooks enforce rules deterministically** (where CLAUDE.md can fail). Skills package reusable expertise. And research shows mixing topics in a single chat causes **39% performance degradation**.
@@ -50,7 +49,7 @@ cp -r skills/* ~/.claude/skills/
 
 ## 📖 The Guide
 
-**[📱 Read V4 on Website](https://thedecipherist.com/articles/claude-code-guide-v4/?utm_source=github&utm_medium=readme&utm_campaign=claude-code-mastery&utm_content=guide-section)** (recommended) | **[📱 Read V3 on Website](https://thedecipherist.github.io/claude-code-mastery/?utm_source=github&utm_medium=readme&utm_campaign=claude-code-mastery&utm_content=guide-section)** | [📄 View GUIDE.md (V3)](./GUIDE.md)
+**[📱 Read V3 on GitHub Pages](https://thedecipherist.github.io/claude-code-mastery/?utm_source=github&utm_medium=readme&utm_campaign=claude-code-mastery&utm_content=guide-section)** | [📄 View GUIDE.md (V3)](./GUIDE.md)
 
 ### What's Covered
 
