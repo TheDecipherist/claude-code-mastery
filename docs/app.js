@@ -214,8 +214,11 @@
     try {
       const markdown = await fetchGuide();
 
+      // Strip the V4 banner blockquote from the top (already shown as HTML banner)
+      const strippedMarkdown = markdown.replace(/^(?:>.*\n)+\n---\n\n/, '');
+
       // Parse markdown to HTML
-      const rawHtml = marked.parse(markdown);
+      const rawHtml = marked.parse(strippedMarkdown);
 
       // Sanitize HTML
       const cleanHtml = DOMPurify.sanitize(rawHtml, {

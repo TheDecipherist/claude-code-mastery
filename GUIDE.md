@@ -1,6 +1,11 @@
+## The new V4 is live → [Read it on our website](https://thedecipherist.com/articles/claude-code-guide-v4/?utm_source=github&utm_medium=repo&utm_campaign=claude-code-mastery&utm_content=v4-banner)
+This repo contains the older version of the Claude Code Mastery guide. The complete V4 guide (85% context reduction, agents, teleportation) is available on our website for the best reading experience.
+
+---
+
 # The Complete Guide to Claude Code V3: LSP, CLAUDE.md, MCP, Skills & Hooks — Now With IDE-Level Code Intelligence
 
-📸 **[View with banner on the website](https://thedecipherist.github.io/claude-code-mastery?utm_source=reddit&utm_medium=post&utm_campaign=claude-code-mastery&utm_content=v3-guide)**
+📸 **[View V3 on the website](https://thedecipherist.github.io/claude-code-mastery/?utm_source=reddit&utm_medium=post&utm_campaign=claude-code-mastery&utm_content=v3-guide)**
 
 ## 🎉 V3: Built on Community Feedback (Again)
 

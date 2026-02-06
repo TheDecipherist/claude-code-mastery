@@ -1,8 +1,15 @@
+> ## V4 is live → [Read it on our website](https://thedecipherist.com/articles/claude-code-guide-v4/?utm_source=github&utm_medium=repo&utm_campaign=claude-code-mastery&utm_content=v4-banner)
+>
+> This repo contains the older version of the Claude Code Mastery guide. The complete V4 guide (85% context reduction, agents, teleportation) is available on our website for the best reading experience.
+
+---
+
 # Claude Code Mastery
 
 The complete guide to maximizing Claude Code: Global CLAUDE.md, MCP Servers, Commands, Hooks, Skills, and Why Single-Purpose Chats Matter.
 
-### 🌐 [Read the Guide on Our Website](https://thedecipherist.github.io/claude-code-mastery/?utm_source=github&utm_medium=readme&utm_campaign=claude-code-mastery&utm_content=hero-cta) ← Best reading experience
+### 🌐 [Read V4 on Our Website](https://thedecipherist.com/articles/claude-code-guide-v4/?utm_source=github&utm_medium=readme&utm_campaign=claude-code-mastery&utm_content=hero-cta) ← Best reading experience
+### 🌐 [Read V3 on Our Website](https://thedecipherist.github.io/claude-code-mastery/?utm_source=github&utm_medium=readme&utm_campaign=claude-code-mastery&utm_content=hero-cta)
 
 > **TL;DR:** Your global `~/.claude/CLAUDE.md` is a security gatekeeper AND project scaffolding blueprint. MCP servers extend Claude's capabilities. Custom commands automate workflows. **Hooks enforce rules deterministically** (where CLAUDE.md can fail). Skills package reusable expertise. And research shows mixing topics in a single chat causes **39% performance degradation**.
 
@@ -43,7 +50,7 @@ cp -r skills/* ~/.claude/skills/
 
 ## 📖 The Guide
 
-**[📱 Read on Website](https://thedecipherist.github.io/claude-code-mastery/?utm_source=github&utm_medium=readme&utm_campaign=claude-code-mastery&utm_content=guide-section)** (recommended) | [📄 View GUIDE.md](./GUIDE.md)
+**[📱 Read V4 on Website](https://thedecipherist.com/articles/claude-code-guide-v4/?utm_source=github&utm_medium=readme&utm_campaign=claude-code-mastery&utm_content=guide-section)** (recommended) | **[📱 Read V3 on Website](https://thedecipherist.github.io/claude-code-mastery/?utm_source=github&utm_medium=readme&utm_campaign=claude-code-mastery&utm_content=guide-section)** | [📄 View GUIDE.md (V3)](./GUIDE.md)
 
 ### What's Covered
 
