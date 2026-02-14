@@ -1,4 +1,4 @@
-> ## 🚀 NEW: [Claude Code Master Starter Kit](https://thedecipherist.github.io/claude-code-mastery-project-starter-kit/?utm_source=github&utm_medium=readme&utm_campaign=claude-code-mastery&utm_content=starter-kit-banner)
+> ## 🚀 NEW: [Claude Code Mastery Starter Kit](https://thedecipherist.github.io/claude-code-mastery-project-starter-kit/?utm_source=github&utm_medium=readme&utm_campaign=claude-code-mastery&utm_content=starter-kit-banner)
 >
 > Everything from V1–V5 baked into a production-ready project template. 16 slash commands, deterministic hook enforcement, a battle-tested MongoDB wrapper, live AI monitoring, and three-layer security — all wired up and ready to clone. **Stop configuring, start building.**
 
