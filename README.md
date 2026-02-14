@@ -1,10 +1,10 @@
-> ## 🚀 NEW: [Claude Code Mastery Starter Kit](https://thedecipherist.github.io/claude-code-mastery-project-starter-kit/?utm_source=github&utm_medium=readme&utm_campaign=claude-code-mastery&utm_content=starter-kit-banner)
->
-> Everything from V1–V5 baked into a production-ready project template. 16 slash commands, deterministic hook enforcement, a battle-tested MongoDB wrapper, live AI monitoring, and three-layer security — all wired up and ready to clone. **Stop configuring, start building.**
-
 > ## V4 is live → [Read it on our website](https://thedecipherist.com/articles/claude-code-guide-v4/?utm_source=github&utm_medium=repo&utm_campaign=claude-code-mastery&utm_content=v4-banner)
 >
 > This repo contains the older version of the Claude Code Mastery guide. The complete V4 guide (85% context reduction, agents, teleportation) is available on our website for the best reading experience.
+
+> ## 🚀 NEW: [Claude Code Mastery Starter Kit](https://thedecipherist.github.io/claude-code-mastery-project-starter-kit/?utm_source=github&utm_medium=readme&utm_campaign=claude-code-mastery&utm_content=starter-kit-banner)
+>
+> Everything from V1–V5 baked into a production-ready project template. 16 slash commands, deterministic hook enforcement, a battle-tested MongoDB wrapper, live AI monitoring, and three-layer security — all wired up and ready to clone. **Stop configuring, start building.**
 
 ---
 
