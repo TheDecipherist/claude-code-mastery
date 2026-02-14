@@ -2,15 +2,15 @@
 >
 > This repo contains the older version of the Claude Code Mastery guide. The complete V4 guide (85% context reduction, agents, teleportation) is available on our website for the best reading experience.
 
-> ## 🚀 NEW: [Claude Code Mastery Starter Kit](https://thedecipherist.github.io/claude-code-mastery-project-starter-kit/?utm_source=github&utm_medium=readme&utm_campaign=claude-code-mastery&utm_content=starter-kit-banner)
->
-> Everything from V1–V5 baked into a production-ready project template. 16 slash commands, deterministic hook enforcement, a battle-tested MongoDB wrapper, live AI monitoring, and three-layer security — all wired up and ready to clone. **Stop configuring, start building.**
-
 ---
 
 # Claude Code Mastery
 
 The complete guide to maximizing Claude Code: Global CLAUDE.md, MCP Servers, Commands, Hooks, Skills, and Why Single-Purpose Chats Matter.
+
+> ## 🚀 NEW: [Claude Code Mastery Starter Kit](https://thedecipherist.github.io/claude-code-mastery-project-starter-kit/?utm_source=github&utm_medium=readme&utm_campaign=claude-code-mastery&utm_content=starter-kit-banner)
+>
+> Everything from V1–V5 baked into a production-ready project template. 16 slash commands, deterministic hook enforcement, a battle-tested MongoDB wrapper, live AI monitoring, and three-layer security — all wired up and ready to clone. **Stop configuring, start building.**
 
 ### 🌐 [Read V3 on GitHub Pages](https://thedecipherist.github.io/claude-code-mastery/?utm_source=github&utm_medium=readme&utm_campaign=claude-code-mastery&utm_content=hero-cta)
 
