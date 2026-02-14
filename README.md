@@ -1,20 +1,24 @@
-> ## 🚀 NEW: [Claude Code Mastery Starter Kit](https://thedecipherist.github.io/claude-code-mastery-project-starter-kit/?utm_source=github&utm_medium=readme&utm_campaign=claude-code-mastery&utm_content=starter-kit-banner)
+> ## 🚀 NEW 2-14-2026: [Claude Code Mastery Starter Kit](https://thedecipherist.github.io/claude-code-mastery-project-starter-kit/?utm_source=github&utm_medium=readme&utm_campaign=claude-code-mastery&utm_content=starter-kit-banner)
 >
 > Everything from V1–V5 baked into a production-ready project template. 16 slash commands, deterministic hook enforcement, a battle-tested MongoDB wrapper, live AI monitoring, and three-layer security — all wired up and ready to clone. **Stop configuring, start building.**
 
 
-# Claude Code Mastery
+# Claude Code Mastery V2 (Obsolete)
 
 The complete guide to maximizing Claude Code: Global CLAUDE.md, MCP Servers, Commands, Hooks, Skills, and Why Single-Purpose Chats Matter.
 
+**This version is obsolete by now. Please use the new Claude Code Mastery Starter Kit instead**
 
-> ## V4 is live → [Read it on our website](https://thedecipherist.com/articles/claude-code-guide-v4/?utm_source=github&utm_medium=repo&utm_campaign=claude-code-mastery&utm_content=v4-banner)
->
-> This repo contains the older version of the Claude Code Mastery guide. The complete V4 guide (85% context reduction, agents, teleportation) is available on our website for the best reading experience.
+Previous versions:
+
+[V5](https://thedecipherist.com/articles/claude-code-guide-v5/?utm_source=github&utm_medium=readme&utm_campaign=claude-code-v5&utm_content=update)
+
+[V4](https://thedecipherist.com/articles/claude-code-guide-v4/?utm_source=github&utm_medium=repo&utm_campaign=claude-code-mastery&utm_content=v4-banner)
+
+[V3](https://thedecipherist.github.io/claude-code-mastery/?utm_source=github&utm_medium=readme&utm_campaign=claude-code-mastery&utm_content=hero-cta)
+
 
 ---
-
-### 🌐 [Read V3 on GitHub Pages](https://thedecipherist.github.io/claude-code-mastery/?utm_source=github&utm_medium=readme&utm_campaign=claude-code-mastery&utm_content=hero-cta)
 
 > **TL;DR:** Your global `~/.claude/CLAUDE.md` is a security gatekeeper AND project scaffolding blueprint. MCP servers extend Claude's capabilities. Custom commands automate workflows. **Hooks enforce rules deterministically** (where CLAUDE.md can fail). Skills package reusable expertise. And research shows mixing topics in a single chat causes **39% performance degradation**.
 
